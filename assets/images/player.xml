@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="player.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="player0000" x="1803" y="895" width="583" height="625" frameX="-5" frameY="-160" frameWidth="600" frameHeight="900"/>
+	<SubTexture name="player-down0000" x="600" y="0" width="600" height="904" frameX="-2" frameY="2" frameWidth="600" frameHeight="900"/>
+	<SubTexture name="player-down-mise0000" x="0" y="0" width="600" height="904" frameX="-2" frameY="2" frameWidth="600" frameHeight="900"/>
+	<SubTexture name="player-left0000" x="1803" y="0" width="601" height="895" frameX="2" frameY="-7" frameWidth="600" frameHeight="900"/>
+	<SubTexture name="player-left-mise0000" x="603" y="904" width="601" height="895" frameX="2" frameY="-7" frameWidth="600" frameHeight="900"/>
+	<SubTexture name="player-right0000" x="602" y="1799" width="602" height="494" frameX="1" frameY="-213" frameWidth="600" frameHeight="900"/>
+	<SubTexture name="player-right-mise0000" x="0" y="1799" width="602" height="494" frameX="1" frameY="-213" frameWidth="600" frameHeight="900"/>
+	<SubTexture name="player-up0000" x="0" y="904" width="603" height="895" frameX="2" frameY="-6" frameWidth="600" frameHeight="900"/>
+	<SubTexture name="player-up-mise0000" x="1200" y="0" width="603" height="895" frameX="2" frameY="-6" frameWidth="600" frameHeight="900"/>
+</TextureAtlas>
