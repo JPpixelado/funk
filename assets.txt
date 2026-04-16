@@ -1,0 +1,29 @@
+fnfk/
+├── main.py
+├── engine/
+│   ├── game.py              # Gerenciador principal de estados
+│   ├── conductor.py
+│   ├── chart.py
+│   ├── note.py
+│   ├── input.py
+│   ├── menu.py              # Menu Principal
+│   ├── settings.py          # Configurações e volume
+│   ├── freeplay.py          # Tela de Freeplay
+│   └── levels.py            # Seleção de fases (dentro do Freeplay ou História)
+├── assets/
+│   ├── 2015/
+│   │   ├── icon.png
+│   │   ├── 2015-easy.json
+│   │   ├── 2015-normal.json
+│   │   ├── player-voices.ogg
+│   │   ├── enemy-voices.ogg
+│   │   ├── inst.ogg
+│   │   └── 2015.py          # Arquivo específico da fase
+│   ├── images/
+│   │   ├── elements/
+│   │   ├── notes/           # spritesheets das notas
+│   │   ├── characters/      # spritesheets dos personagens
+│   │   └── fonts/           # fontes bitmap ou .ttf
+│   └── scripts/             # eventos futuros
+├── mods/
+└── save/                    # (futuro) progresso, configurações salvas
