@@ -9,12 +9,14 @@ fnfk/
 │   ├── menu.py              # Menu Principal
 │   ├── settings.py          # Configurações e volume
 │   ├── freeplay.py          # Tela de Freeplay
-│   └── levels.py            # Seleção de fases (dentro do Freeplay ou História)
+│   |── levels.py            # Seleção de fases (dentro do Freeplay ou História) #esquecido
+|   └── story.py
 ├── assets/
 │   ├── 2015/
 │   │   ├── icon.png
 │   │   ├── 2015-easy.json
 │   │   ├── 2015-normal.json
+|   |   ├── 2015-hard.json
 │   │   ├── player-voices.ogg
 │   │   ├── enemy-voices.ogg
 │   │   ├── inst.ogg
