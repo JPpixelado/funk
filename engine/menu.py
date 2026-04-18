@@ -18,9 +18,12 @@ class MainMenu:
                 self.select_option()
 
     def select_option(self):
-        if self.options[self.selected] == "Freeplay":
+        option = self.options[self.selected]
+        if option == "Modo História":
+            self.game.change_state("story_mode")
+        elif option == "Freeplay":
             self.game.change_state("freeplay")
-        elif self.options[self.selected] == "Opções":
+        elif option == "Opções":
             self.game.change_state("settings")
 
     def update(self):
@@ -28,9 +31,9 @@ class MainMenu:
 
     def draw(self, surface):
         title = self.font.render("FNFK", True, (255, 255, 255))
-        surface.blit(title, (640 - title.get_width()//2, 120))
+        surface.blit(title, (640 - title.get_width() // 2, 120))
 
         for i, option in enumerate(self.options):
             color = (255, 220, 0) if i == self.selected else (180, 180, 180)
             text = self.font.render(option, True, color)
-            surface.blit(text, (640 - text.get_width()//2, 280 + i * 80))
+            surface.blit(text, (640 - text.get_width() // 2, 280 + i * 80))

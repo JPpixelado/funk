@@ -4,6 +4,7 @@ from engine.menu import MainMenu
 from engine.freeplay import FreeplayMenu
 from engine.levels import LevelSelect
 from engine.settings import SettingsMenu
+from engine.story import StoryMode
 
 class Game:
     def __init__(self, screen, clock):
@@ -17,6 +18,7 @@ class Game:
         self.freeplay = FreeplayMenu(self)
         self.level_select = LevelSelect(self)
         self.settings = SettingsMenu(self)
+        self.story_mode = StoryMode(self)
         
         # Volume global (0.0 a 1.0)
         self.volume = 0.8
@@ -54,6 +56,8 @@ class Game:
                     self.level_select.handle_event(event)
                 elif self.current_state == "settings":
                     self.settings.handle_event(event)
+                elif self.current_state == "story_mode":
+                    self.settings.handle_event(event)
 
             # Update
             if self.current_state == "main_menu":
@@ -64,6 +68,8 @@ class Game:
                 self.level_select.update()
             elif self.current_state == "settings":
                 self.settings.update()
+            elif self.current_state == "story_mode":
+                self.story_mode.update()
 
             # Draw
             self.screen.fill((15, 15, 25))
@@ -76,5 +82,7 @@ class Game:
                 self.level_select.draw(self.screen)
             elif self.current_state == "settings":
                 self.settings.draw(self.screen)
+            elif self.current_state == "story_mode":
+                self.story_mode.draw(self.screen)
 
             pygame.display.flip()
