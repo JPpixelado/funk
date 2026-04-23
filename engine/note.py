@@ -26,7 +26,9 @@ class Note:
             self.alpha = max(0, self.alpha - 1200 * dt)
             return
 
-        distance = (self.time - song_position) * (self.speed / 1000.0)
+        spawn_ahead = 2000  # 2 segundos antes
+        
+        distance = ((self.time - spawn_ahead) - song_position) * (self.speed / 1000.0)
         self.y = 498 - distance
         self.frame_index = int(pygame.time.get_ticks() / 60) % 4
 
@@ -46,6 +48,9 @@ class Note:
             scaled = pygame.transform.scale(frame, (64, 64))
             scaled.set_alpha(self.alpha)
             surface.blit(scaled, (self.x, self.y))
+
+        print(self.time, song_position, self.y)
+        
 
     def should_remove(self, song_position: float) -> bool:
         return self.y > 800 or (self.time + 500 < song_position and not self.hit)

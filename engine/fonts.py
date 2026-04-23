@@ -8,8 +8,8 @@ class GameFonts:
         self.base_path = "assets/images/fonts"
         
         # Carrega as fontes principais
-        self.load_font("title",    "font.ttf", 72)   # Substitua pelo nome real do seu arquivo
-        self.load_font("menu",     "font.ttf", 48)
+        self.load_font("title",    "font-full.ttf", 72)
+        self.load_font("menu",     "font-full.ttf", 48)
         self.load_font("small",    "font.ttf", 32)
         self.load_font("score",    "font.ttf", 28)
 
