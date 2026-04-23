@@ -1,4 +1,3 @@
-# assets/2015/2015.py
 import pygame
 from engine.chart import Chart
 from engine.spritesheet import SpriteSheet
@@ -8,7 +7,7 @@ def play(game):
 
     try:
         game.chart = Chart("assets/2015/2015-easy.json")
-        
+
         game.conductor.load_song(
             inst_path="assets/2015/inst.ogg",
             bpm=game.chart.bpm,
@@ -16,6 +15,10 @@ def play(game):
         )
 
         game.notes = game.chart.generate_notes()
+
+        print(f"🧠 Total de notas: {len(game.notes)}")
+        if len(game.notes) > 0:
+            print(f"Primeira nota em: {game.notes[0].time} ms")
 
         game.note_spritesheet = SpriteSheet(
             "assets/images/notes/arrows.png",
@@ -30,18 +33,23 @@ def play(game):
         for note in game.notes:
             note.set_spritesheet(game.note_spritesheet)
 
-        # RECEPTORES 64x64 com espaçamento bom
+        # NÃO VOU MEXER NOS RECEPTORES 😇
         game.receptors = {
-            "left":  pygame.Rect(320, 498, 64, 64),
-            "down":  pygame.Rect(390, 498, 64, 64),
-            "up":    pygame.Rect(500, 498, 64, 64),
-            "right": pygame.Rect(608, 498, 64, 64),
+            "left":  pygame.Rect(690, 73, 110, 110),
+            "down":  pygame.Rect(820, 73, 110, 110),
+            "up":    pygame.Rect(940, 73, 110, 110),
+            "right": pygame.Rect(1065, 73, 110, 110),
         }
 
         game.change_state("playing")
-        game.conductor.play()
 
-        print("✅ Fase 2015 carregada (64×64)")
+        # IMPORTANTE: usar music ao invés de Sound
+        pygame.mixer.music.load("assets/2015/inst.ogg")
+        pygame.mixer.music.play()
+
+        game.conductor.start_time = pygame.time.get_ticks()
+
+        print("✅ Fase 2015 carregada (timing sincronizado)")
 
     except Exception as e:
         print(f"❌ Erro na fase 2015: {e}")

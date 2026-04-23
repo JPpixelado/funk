@@ -1,8 +1,5 @@
 {
 	"speed": 1,
-	"stage": "stage",
-	"player1": "bf",
-	"player2": "dad",
 	"events": [],
 	"notes": [
 		{
@@ -598,10 +595,8 @@
 			"mustHitSection": true
 		}
 	],
-	"gfVersion": "gf",
-	"format": "psych_v1",
 	"bpm": 150,
 	"needsVoices": true,
-	"song": "Test",
+	"song": "Inst",
 	"offset": 0
 }
